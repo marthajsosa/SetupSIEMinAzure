@@ -1,7 +1,7 @@
-<h1>Setup SIEM in Azure</h1>
+# Setup SIEM in Azure
 
 <h2>Description</h2>
-Used custom PowerShell script to extract metadata from Windows Event Viewer to be forwarded to third party API in order to derive geolocation data. Configured Log Analytics Workspace in Azure to ingest custom logs containing geogrphic information (latitude, longitude, state/province, and country). Used KQL to parse log data and configured Azure Sentinel (Microsoft's cloud SIEM) workbook to display global attack data (RDP brute force) on world map according to physical location and magnitude of attacks.
+In a Windows 10 virtual machine, used custom PowerShell script to extract metadata from Windows Event Viewer to be forwarded to third party API in order to derive geolocation data. Configured Log Analytics Workspace in Azure to ingest custom logs containing geogrphic information (latitude, longitude, state/province, and country). Used KQL to parse log data and configured Azure Sentinel (Microsoft's cloud SIEM) workbook to display global attack data (RDP brute force) on world map according to physical location and magnitude of attacks.
 <br />
 
 
@@ -20,32 +20,32 @@ Used custom PowerShell script to extract metadata from Windows Event Viewer to b
 <h2>Program walk-through:</h2>
 
 <p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Create virtual machine & turn off all Firewalls: <br/><img src="https://github.com/urmomtookurscreentime/SetupSIEMinAzure/assets/146014829/28b076db-cad1-4b90-8df3-3c17ea8ee6d0"/>
+
 <br />
 <br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Create Log Analytics Workspace in Azure:  <br/>
+<img src="https://github.com/urmomtookurscreentime/SetupSIEMinAzure/assets/146014829/577fc67b-e425-4e00-aaf6-1f15f43eeb0c"/>
 <br />
 <br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Setup Microsoft Sentinel: <br/>
+<img src="https://github.com/urmomtookurscreentime/SetupSIEMinAzure/assets/146014829/7947a029-de16-409a-a36b-356a49f9baae"/>
 <br />
 <br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Use Geolocation.io API Key in Powershell Script to capture failed login attempts in Windows Event Viewer including latitude and longitude of the IP addresses attempting to attack brute force:  <br/>
+<img src="https://github.com/urmomtookurscreentime/SetupSIEMinAzure/assets/146014829/20848687-be4c-4ea0-94fc-0829b525bd5b"/>
 <br />
 <br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Create Log Analytics Workspace:  <br/>
+<img src="https://github.com/urmomtookurscreentime/SetupSIEMinAzure/assets/146014829/8535c0c8-fe45-4a65-8082-dadeb80a4c5f"/>
 <br />
 <br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Connect custom log and extract fields from raw data with KQL: <br/>
+<img src="https://github.com/urmomtookurscreentime/SetupSIEMinAzure/assets/146014829/8f94d8d4-8308-4549-8c92-6739ce5bb031"/>
 <br />
 <br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Visualize data on a map according to attack concentration :  <br/>
+<img src="https://github.com/urmomtookurscreentime/SetupSIEMinAzure/assets/146014829/e97931e0-762a-49ad-bd90-8883881522b0"/>
 </p>
 
 <!--
