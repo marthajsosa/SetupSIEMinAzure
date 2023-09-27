@@ -7,12 +7,15 @@ Used custom PowerShell script to extract metadata from Windows Event Viewer to b
 
 <h2>Languages and Utilities Used</h2>
 
-- <b>PowerShell</b> 
-- <b>Diskpart</b>
+- <b>PowerShell</b>
+- <b>Azure</b>
+- <b>Sentinel</b>
+- <b>IPGeolocation.io</b>
+- <b>KQL</b>
 
 <h2>Environments Used </h2>
 
-- <b>Windows 10</b> (21H2)
+- <b>Windows 10 Virtual Machine</b>
 
 <h2>Program walk-through:</h2>
 
